@@ -1,1 +1,5 @@
 # 1.-Aptos-DR-image-classification-using-unsupervised-and-supervised-machine-learning
+
+Here APTOS 2019 Blindness Detection dataset are used. First the images converted  to grayscale images and then the images were resized to 28X28 images.  After that the images value are converted the whole data into csv(Comma Separated Values) file.
+
+After these pre-processings, the whole dataset divided into 5 segments using K-Means algorithm.  The APTOS dataset has 5 classes of retinal images.  But it could be seen the differences between several classes are quiet negligible and it is very difficult to separatethem.  So, K-Means is used to cluster based on similarities of the images.  But it could be seen that, in a cluster, images of other classes also exist.  After getting these 5 clusters,all the images are taken every cluster separately into classification model.  For example, The cluster 0 has 953 images, which consist the images from all 5 classes. So those images are used to train and test in a classification model and get the results.
